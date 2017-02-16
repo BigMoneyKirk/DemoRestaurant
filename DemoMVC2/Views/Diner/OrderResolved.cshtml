@@ -1,0 +1,14 @@
+﻿@model DemoMVC2.Models.Cart
+
+@{
+    ViewBag.Title = "Order Resolved";
+}
+
+<div>
+    @Model.Customername
+    <br />
+    @Model.Phone
+    <br />
+    <p>You just purchased a @Model.Food.Portion @Model.Food.Name! :D</p>
+    <h6>THANK YOU!!</h6>
+</div>

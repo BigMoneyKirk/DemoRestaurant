@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Welcome to Kirkland's Diner!";
+}
+<div> 
+    <h1>WELCOME TO 
+    @ViewBag.dinername
+    !!</h1>
+    <div>address will go here</div>
+    <p>CLICK BELOW :D</p>
+    @Html.ActionLink("menu", "Menu", null, new { @class = "btn btn-info"})
+</div>

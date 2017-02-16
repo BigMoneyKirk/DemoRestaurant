@@ -1,0 +1,42 @@
+﻿@model DemoMVC2.Models.Cart
+@using Diner;
+
+@{
+    ViewBag.Title = "Order";
+}
+
+<div> 
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <div>name: @Html.TextBoxFor(x => x.Customername, new { @placeholder = "i.e. John Smith"})</div>
+        <div>phone: @Html.TextBoxFor(x => x.Phone, new { @placeholder = "555-555-5555"})</div>
+            
+        <br />
+
+        <div>
+            @foreach (var item in ViewData["Menu"] as List<FoodItem>)
+            {
+                @Html.RadioButtonFor(x => x.Food.Name, item.Name)@item.Name;
+                <br />
+            }
+        </div>
+
+        <br />
+
+        <div>
+            @foreach (var item in ViewData["Size"] as List<string>)
+            {
+                @Html.RadioButtonFor(x => x.Food.Portion, item)@item
+                <br />
+            }
+        </div>
+
+        <br />
+
+        <div>
+            <input type= "submit" value="Submit Order" />
+        </div>
+
+    }
+</div>
