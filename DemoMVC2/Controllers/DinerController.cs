@@ -12,7 +12,7 @@ namespace DemoMVC2.Controllers
     {
             Restaurant StevosDiner = new Restaurant("Stevo's Joint",
                 new Address("567 Runs Branch Rd", "Newington", "GA", 30446),
-                new Menu(new List<FoodItem>(new[]
+                new Menu(new List<IFoodItem>(new[]
                 {
                     new FoodItem("booty burger", 10.2, Sizes.xlarge),
                     new FoodItem("monkey sauce ham", 20.30, Sizes.small),

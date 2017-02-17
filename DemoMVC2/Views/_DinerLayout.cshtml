@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Scripts.Render("~/Scripts/jquery")
 </head>
 <body>
-    <div>
-        <h1>NavBar</h1>
+    <div class="navbar">
+        <ul class="nav navbar-nav">
+            <li>
+                @Html.ActionLink("Home", "Index", "Diner")
+            </li>
+
+            <li>
+                @Html.ActionLink("Menu", "Menu", "Diner")
+            </li>
+
+            <li>
+                @Html.ActionLink("Order", "Order", "Diner")
+            </li>
+        </ul>
     </div>
+
     <div>
         @RenderBody()
     </div>

@@ -31,5 +31,11 @@ namespace Diner
         {
             return FoodItemList;
         }
+
+
+        public void AddItem(IFoodItem item)
+        {
+            FoodItemList.Add(item);
+        }
     }
 }

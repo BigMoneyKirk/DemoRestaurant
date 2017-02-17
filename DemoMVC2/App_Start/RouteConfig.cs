@@ -22,7 +22,7 @@ namespace DemoMVC2
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Default", action = "Somedata", id = UrlParameter.Optional }
+                defaults: new { controller = "Diner", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
