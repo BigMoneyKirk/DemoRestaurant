@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Diner
 {
-    public class FoodItem
+    public class FoodItem : IFoodItem
     {
         public FoodItem()
         {
